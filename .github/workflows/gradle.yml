@@ -28,14 +28,13 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-    - name: Update Username from Secrets
-      env:
-        MOCK_USERNAME: ${{ secrets.PIXABAY_API_KEY }}
-        run: echo PIXABAY_API_KEY="$PIXABAY_API_KEY" > ./local.properties
     - name: Build with Gradle
       uses: gradle/gradle-build-action@bd5760595778326ba7f1441bcf7e88b49de61a25 # v2.6.0
       with:
         arguments: build
+      env:
+        PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+        run: echo PIXABAY_API_KEY="$PIXABAY_API_KEY" > ./local.properties
     - uses: actions/upload-artifact@v3
       with:
         name: Package
