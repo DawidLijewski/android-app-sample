@@ -19,13 +19,15 @@ import androidx.paging.compose.itemKey
 import coil.compose.AsyncImage
 import com.lijewski.sample.data.model.PixabayPhoto
 import com.ramcosta.composedestinations.annotation.Destination
+import com.ramcosta.composedestinations.annotation.RootNavGraph
 
+@RootNavGraph(start = true)
 @Destination
 @Composable
 fun PhotosScreen(
     viewModel: PhotosViewModel = hiltViewModel()
 ) {
-    val photos = viewModel.getRemoteData().collectAsLazyPagingItems()
+    val photos = viewModel.photosPagingData.collectAsLazyPagingItems()
 
     LazyColumn {
         items(

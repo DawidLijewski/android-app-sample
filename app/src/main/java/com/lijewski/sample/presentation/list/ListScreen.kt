@@ -46,9 +46,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.lijewski.sample.R
 import com.lijewski.sample.data.model.TextMessage
 import com.ramcosta.composedestinations.annotation.Destination
-import com.ramcosta.composedestinations.annotation.RootNavGraph
 
-@RootNavGraph(start = true)
 @Destination
 @Composable
 fun ListScreen(

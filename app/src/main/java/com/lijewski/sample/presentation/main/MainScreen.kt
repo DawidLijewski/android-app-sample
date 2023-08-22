@@ -2,7 +2,6 @@ package com.lijewski.sample.presentation.main
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -61,11 +60,9 @@ fun MainScreenUI(
             modifier = Modifier.padding(it),
             startRoute = NavGraphs.root.startRoute
         )
-
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MainScaffold(
     snackbarHostState: SnackbarHostState,
