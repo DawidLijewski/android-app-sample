@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SampleApplication</string>
+
+    <string name="error_saving_new_msg">Failed to save new message.</string>
+
+    <string name="save">Save</string>
+    <string name="type_new_message">Type new message</string>
+</resources>
